@@ -67,16 +67,16 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-12 md:py-32 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-10 leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold text-gray-900 mb-6 md:mb-10 leading-tight">
             Turn Missed Calls Into
             <span className="text-blue-600"> Paying Customers</span>
           </h1>
-          <p className="text-2xl text-gray-700 mb-8 max-w-4xl mx-auto leading-relaxed font-medium">
+          <p className="text-lg md:text-2xl text-gray-700 mb-8 md:mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
             <strong>67% of your leads won't call back — they'll call your competitor.</strong>
           </p>
-          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl text-gray-600 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed">
             Our AI Receptionist answers instantly, captures leads, and books them — so you never miss a sale again.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -94,7 +94,7 @@ export default function LandingPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 md:py-28 bg-white border-t border-b border-gray-100">
+      <section className="py-12 md:py-28 bg-white border-t border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
@@ -108,13 +108,13 @@ export default function LandingPage() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-20 md:py-32 bg-red-50">
+      <section className="py-16 md:py-32 bg-red-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-24">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+          <div className="text-center mb-12 md:mb-24">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-8">
               The Hidden Revenue Killer in Your Business
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
               <strong>You're bleeding money every single day from missed calls.</strong> Here's the brutal reality most
               business owners don't realize:
             </p>
@@ -173,11 +173,13 @@ export default function LandingPage() {
       </section>
 
       {/* Solution Section */}
-      <section className="py-20 md:py-32 bg-blue-50">
+      <section className="py-16 md:py-32 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-24">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">The Solution: Never Miss Another Call</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-12 md:mb-24">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-8">
+              The Solution: Never Miss Another Call
+            </h2>
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
               <strong>The math is simple: More answered calls = More customers = More money.</strong>
               Our AI Receptionist answers every call instantly, books appointments automatically, and turns missed
               opportunities into revenue. One-time setup, lifetime of captured leads.
@@ -186,12 +188,12 @@ export default function LandingPage() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             <Card className="bg-white border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-6 md:p-8 text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Phone className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Capture Every Dollar</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
                   Every call that goes to voicemail is money lost forever. Our AI answers in under 2 seconds, 24/7. No
                   more "sorry I missed your call" - just instant connection to paying customers.
                 </p>
@@ -200,12 +202,12 @@ export default function LandingPage() {
             </Card>
 
             <Card className="bg-white border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-6 md:p-8 text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Calendar className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Turn Calls Into Cash</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
                   Stop playing phone tag. Our AI qualifies leads, handles objections, and books appointments instantly.
                   Callers become customers before they hang up.
                 </p>
@@ -214,12 +216,12 @@ export default function LandingPage() {
             </Card>
 
             <Card className="bg-white border-0 shadow-lg">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-6 md:p-8 text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                   <TrendingUp className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">More Calls = More Money</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
                   Simple equation: Answer more calls, make more money. Clients typically see $20,000-$50,000 additional
                   monthly revenue just from capturing calls they used to miss.
                 </p>
@@ -231,11 +233,13 @@ export default function LandingPage() {
       </section>
 
       {/* Industries Section */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-16 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-24">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Built for Service-Based Businesses</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-12 md:mb-24">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-8">
+              Built for Service-Based Businesses
+            </h2>
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
               Perfect for businesses that rely on phone calls for bookings and appointments:
             </p>
           </div>
@@ -246,12 +250,14 @@ export default function LandingPage() {
               return (
                 <div
                   key={index}
-                  className="bg-gray-50 p-8 rounded-xl text-center hover:bg-blue-50 transition-colors group"
+                  className="bg-gray-50 p-4 md:p-8 rounded-xl text-center hover:bg-blue-50 transition-colors group"
                 >
                   <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
                     <IconComponent className="h-6 w-6 text-blue-600" />
                   </div>
-                  <span className="text-lg font-semibold text-gray-900 group-hover:text-blue-600">{industry.name}</span>
+                  <span className="text-sm md:text-lg font-semibold text-gray-900 group-hover:text-blue-600">
+                    {industry.name}
+                  </span>
                 </div>
               )
             })}
@@ -260,21 +266,23 @@ export default function LandingPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 md:py-32 bg-gray-50">
+      <section className="py-16 md:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-24">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">What This Means for Your Business</h2>
-            <p className="text-xl text-gray-600">
+          <div className="text-center mb-12 md:mb-24">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-8">
+              What This Means for Your Business
+            </h2>
+            <p className="text-base md:text-xl text-gray-600">
               <strong>Stop losing customers to competitors.</strong> Here's exactly what changes when you never miss a
               call:
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <CheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
-                <span className="text-lg text-gray-700">{benefit}</span>
+                <span className="text-sm md:text-lg text-gray-700">{benefit}</span>
               </div>
             ))}
           </div>
@@ -282,10 +290,12 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-blue-600">
+      <section className="py-16 md:py-32 bg-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Stop Losing Customers to Your Competitors</h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-6">
+            Stop Losing Customers to Your Competitors
+          </h2>
+          <p className="text-base md:text-xl text-blue-100 mb-4 md:mb-8 max-w-3xl mx-auto">
             <strong>Every day you wait, you're losing customers.</strong> Apply for a free custom demo and see exactly
             how our AI receptionist will capture every lead for your specific business. Limited spots available.
           </p>
