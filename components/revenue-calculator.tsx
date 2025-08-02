@@ -82,7 +82,7 @@ export function RevenueCalculator() {
           </div>
         </div>
 
-        <div className="bg-red-50 p-6 rounded-lg">
+        <div className="bg-red-50 p-6 rounded-lg border-2 border-red-200">
           <h4 className="font-bold text-gray-900 mb-4">Your Revenue Loss Breakdown</h4>
           <div className="space-y-3">
             <div className="flex justify-between items-center py-2 border-b border-red-200">

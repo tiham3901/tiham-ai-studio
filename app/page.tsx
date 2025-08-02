@@ -1,20 +1,4 @@
-import {
-  Phone,
-  Clock,
-  Calendar,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Thermometer,
-  Home,
-  Car,
-  Sparkles,
-  Heart,
-  Scissors,
-  Dumbbell,
-  UtensilsCrossed,
-} from "lucide-react"
+import { Phone, Calendar, TrendingUp, ArrowRight, CheckCircle, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
@@ -22,26 +6,6 @@ import Link from "next/link"
 import { RevenueCalculator } from "@/components/revenue-calculator"
 
 export default function LandingPage() {
-  const industries = [
-    { name: "HVAC", icon: Thermometer },
-    { name: "Roofing", icon: Home },
-    { name: "Car Rentals", icon: Car },
-    { name: "Car Detailing", icon: Sparkles },
-    { name: "Dental Clinics", icon: Heart },
-    { name: "Med Spas", icon: Scissors },
-    { name: "Gyms", icon: Dumbbell },
-    { name: "Restaurants", icon: UtensilsCrossed },
-  ]
-
-  const benefits = [
-    "Capture 100% of incoming calls - never miss another lead",
-    "Instant response in under 2 seconds vs 4+ rings for humans",
-    "Books appointments 24/7 directly into your calendar",
-    "Handles 50+ calls simultaneously without breaking a sweat",
-    "Sounds 99% human - customers can't tell the difference",
-    "Guaranteed 30-50% revenue increase within 90 days",
-  ]
-
   const stats = [
     { number: "67%", label: "of small business calls go unanswered" },
     { number: "90%", label: "of customers won't call back after no answer" },
@@ -49,10 +13,28 @@ export default function LandingPage() {
     { number: "1.2 sec", label: "average AI response time" },
   ]
 
+  const problemPoints = [
+    "Calls go to voicemail during lunch breaks and meetings",
+    "After-hours calls are completely lost to competitors",
+    "Weekend emergencies go straight to voicemail",
+    "Holiday calls mean lost revenue for weeks",
+    "90% of customers won't call back if you don't answer",
+    "Each missed call costs $500-$5,000 in lost revenue",
+  ]
+
+  const solutionPoints = [
+    "AI answers every call in under 2 seconds, even during breaks",
+    "24/7 availability including nights, weekends, and holidays",
+    "100% call capture rate - never miss a lead again",
+    "Handles 50+ calls simultaneously without breaking",
+    "Books appointments directly into your calendar",
+    "Sounds 99% human - customers can't tell the difference",
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="border-b border-gray-100">
+      <header className="border-b border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2 md:space-x-3">
@@ -60,7 +42,7 @@ export default function LandingPage() {
               <span className="text-lg md:text-2xl font-bold text-gray-900">Tiham AI Studio</span>
             </div>
             <Link href="https://tally.so/r/3y8G66" target="_blank">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 text-sm md:px-6 md:text-base">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 text-sm md:px-6 md:text-base transition-all duration-200">
                 Get Free Demo
               </Button>
             </Link>
@@ -69,266 +51,214 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-white">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-gray-50 via-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-2xl md:text-6xl font-bold text-gray-900 mb-4 md:mb-10 leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold text-gray-900 mb-8 md:mb-12 leading-tight">
             Turn Missed Calls Into
             <span className="text-blue-600"> Paying Customers</span>
           </h1>
-          <p className="text-sm md:text-2xl text-gray-700 mb-4 md:mb-8 max-w-4xl mx-auto leading-relaxed font-medium">
-            <strong>67% of your leads won't call back — they'll call your competitor.</strong>
+          <p className="text-lg md:text-2xl text-gray-700 mb-10 md:mb-16 max-w-4xl mx-auto leading-relaxed">
+            <strong>You're losing customers during breaks, after hours, weekends, and holidays.</strong> Our AI
+            Receptionist answers every call instantly, 24/7 — so you never miss a sale again.
           </p>
-          <p className="text-sm md:text-xl text-gray-600 mb-6 md:mb-12 max-w-3xl mx-auto leading-relaxed">
-            Our AI Receptionist answers instantly, captures leads, and books them — so you never miss a sale again.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 md:mb-20">
             <Link href="https://tally.so/r/3y8G66" target="_blank">
               <Button
                 size="lg"
-                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 md:px-10 md:py-5 text-base md:text-xl font-semibold"
+                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 md:px-12 md:py-6 text-lg md:text-xl font-semibold transition-all duration-200 hover:scale-105 shadow-lg"
               >
                 Get Free Custom Demo
-                <ArrowRight className="ml-2 h-4 w-4 md:ml-3 md:h-6 md:w-6" />
+                <ArrowRight className="ml-3 h-5 w-5 md:h-6 md:w-6" />
               </Button>
             </Link>
           </div>
-        </div>
-      </section>
 
-      {/* Stats Section - moved right after hero */}
-      <section className="py-4 md:py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
+          {/* Stats integrated into hero */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat, index) => (
-              <div key={index}>
-                <div className="text-2xl md:text-4xl font-bold text-blue-600 mb-1 md:mb-2">{stat.number}</div>
-                <div className="text-gray-600 text-xs md:text-base">{stat.label}</div>
+              <div
+                key={index}
+                className="text-center bg-white/80 p-4 md:p-6 rounded-xl border border-gray-200 shadow-sm"
+              >
+                <div className="text-2xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                <div className="text-gray-600 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Problem Section - now comes after stats */}
-      <section className="py-16 md:py-24 bg-red-50">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 md:mb-24">
-            <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-8">
-              The Hidden Revenue Killer in Your Business
-            </h2>
-            <p className="text-sm md:text-xl text-gray-600 max-w-3xl mx-auto">
-              <strong>You're bleeding money every single day from missed calls.</strong> Here's the brutal reality most
-              business owners don't realize:
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="space-y-6 md:space-y-8">
-              <div className="flex items-start space-x-3 md:space-x-4">
-                <div className="bg-red-100 p-2 md:p-3 rounded-full">
-                  <Phone className="h-4 w-4 md:h-6 md:w-6 text-red-600" />
-                </div>
-                <div>
-                  <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">
-                    Most Calls Go Straight to Voicemail
-                  </h3>
-                  <p className="text-sm md:text-base text-gray-600">
-                    <strong>Reality check:</strong> Small businesses answer only 1 out of 3 calls during business hours.
-                    After 5pm, weekends, and lunch breaks? Almost zero. Meanwhile, your competitors who answer first get
-                    the job.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-3 md:space-x-4">
-                <div className="bg-red-100 p-2 md:p-3 rounded-full">
-                  <Clock className="h-4 w-4 md:h-6 md:w-6 text-red-600" />
-                </div>
-                <div>
-                  <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">90% Never Call Back</h3>
-                  <p className="text-sm md:text-base text-gray-600">
-                    <strong>Customer behavior studies show:</strong> 90% of customers won't call back if you don't
-                    answer. They immediately call your competitor instead. Every ring counts - customers expect answers
-                    within 3 rings or 15 seconds.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-3 md:space-x-4">
-                <div className="bg-red-100 p-2 md:p-3 rounded-full">
-                  <DollarSign className="h-4 w-4 md:h-6 md:w-6 text-red-600" />
-                </div>
-                <div>
-                  <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">
-                    Each Missed Call Costs $500-$5,000
-                  </h3>
-                  <p className="text-sm md:text-base text-gray-600">
-                    <strong>Industry analysis:</strong> Average job values: HVAC emergency calls ($800-$2,500), roofing
-                    projects ($8,000-$15,000), dental procedures ($200-$3,000). Missing just 3 calls per week =
-                    $78,000-$390,000 lost annually.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-4 md:p-8 rounded-2xl shadow-lg border-2 border-red-200">
-              <RevenueCalculator />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Solution Section */}
-      <section className="py-16 md:py-24 bg-blue-50">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 md:mb-24">
-            <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-8">
-              The Solution: Never Miss Another Call
-            </h2>
-            <p className="text-sm md:text-xl text-gray-600 max-w-3xl mx-auto">
-              <strong>The math is simple: More answered calls = More customers = More money.</strong>
-              Our AI Receptionist answers every call instantly, books appointments automatically, and turns missed
-              opportunities into revenue. One-time setup, lifetime of captured leads.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-4 md:gap-8">
-            <Card className="bg-white border-0 shadow-lg">
-              <CardContent className="p-4 md:p-8 text-center">
-                <div className="bg-blue-100 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                  <Phone className="h-6 w-6 md:h-8 md:w-8 text-blue-600" />
-                </div>
-                <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-2 md:mb-4">Capture Every Dollar</h3>
-                <p className="text-gray-600 mb-3 md:mb-4 text-xs md:text-base">
-                  Every call that goes to voicemail is money lost forever. Our AI answers in under 2 seconds, 24/7. No
-                  more "sorry I missed your call" - just instant connection to paying customers.
-                </p>
-                <div className="text-lg md:text-2xl font-bold text-blue-600">$0 Lost Revenue</div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-0 shadow-lg">
-              <CardContent className="p-4 md:p-8 text-center">
-                <div className="bg-blue-100 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                  <Calendar className="h-6 w-6 md:h-8 md:w-8 text-blue-600" />
-                </div>
-                <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-2 md:mb-4">Turn Calls Into Cash</h3>
-                <p className="text-gray-600 mb-3 md:mb-4 text-xs md:text-base">
-                  Stop playing phone tag. Our AI qualifies leads, handles objections, and books appointments instantly.
-                  Callers become customers before they hang up.
-                </p>
-                <div className="text-lg md:text-2xl font-bold text-blue-600">Instant Bookings</div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-0 shadow-lg">
-              <CardContent className="p-4 md:p-8 text-center">
-                <div className="bg-blue-100 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
-                  <TrendingUp className="h-6 w-6 md:h-8 md:w-8 text-blue-600" />
-                </div>
-                <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-2 md:mb-4">
-                  More Calls = More Money
-                </h3>
-                <p className="text-gray-600 mb-3 md:mb-4 text-xs md:text-base">
-                  Simple equation: Answer more calls, make more money. Clients typically see $20,000-$50,000 additional
-                  monthly revenue just from capturing calls they used to miss.
-                </p>
-                <div className="text-lg md:text-2xl font-bold text-blue-600">$35K+ Monthly</div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 md:mb-24">
-            <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-8">
-              Built for Service-Based Businesses
-            </h2>
-            <p className="text-sm md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Perfect for businesses that rely on phone calls for bookings and appointments:
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            {industries.map((industry, index) => {
-              const IconComponent = industry.icon
-              return (
-                <div
-                  key={index}
-                  className="bg-gray-50 p-3 md:p-8 rounded-xl text-center hover:bg-blue-50 transition-colors group"
-                >
-                  <div className="bg-blue-100 w-8 h-8 md:w-12 md:h-12 rounded-full flex items-center justify-center mx-auto mb-2 md:mb-4 group-hover:bg-blue-200 transition-colors">
-                    <IconComponent className="h-4 w-4 md:h-6 md:w-6 text-blue-600" />
-                  </div>
-                  <span className="text-xs md:text-lg font-semibold text-gray-900 group-hover:text-blue-600">
-                    {industry.name}
-                  </span>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
+      {/* Problem vs Solution Section */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 md:mb-24">
-            <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-8">
-              What This Means for Your Business
-            </h2>
-            <p className="text-sm md:text-xl text-gray-600">
-              <strong>Stop losing customers to competitors.</strong> Here's exactly what changes when you never miss a
-              call:
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">The Problem vs The Solution</h2>
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
+              See exactly how our AI Receptionist transforms your business from losing customers during off-hours to
+              capturing every lead, 24/7.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-3 md:gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3 md:space-x-4">
-                <CheckCircle className="h-4 w-4 md:h-6 md:w-6 text-green-600 mt-0.5 md:mt-1 flex-shrink-0" />
-                <span className="text-xs md:text-lg text-gray-700">{benefit}</span>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            {/* Problem Side */}
+            <div className="bg-red-50 p-6 md:p-8 rounded-2xl border-2 border-red-200">
+              <div className="flex items-center mb-6">
+                <div className="bg-red-100 p-3 rounded-full mr-4">
+                  <X className="h-6 w-6 text-red-600" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-red-600">Current Reality</h3>
               </div>
-            ))}
+              <div className="space-y-4">
+                {problemPoints.map((point, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <X className="h-5 w-5 text-red-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm md:text-base">{point}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 p-4 bg-red-100 rounded-lg border border-red-300">
+                <p className="text-red-700 font-semibold text-center">
+                  Result: $78,000 - $390,000 lost annually from just 3 missed calls per week
+                </p>
+              </div>
+            </div>
+
+            {/* Solution Side */}
+            <div className="bg-green-50 p-6 md:p-8 rounded-2xl border-2 border-green-200">
+              <div className="flex items-center mb-6">
+                <div className="bg-green-100 p-3 rounded-full mr-4">
+                  <CheckCircle className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-green-600">With AI Receptionist</h3>
+              </div>
+              <div className="space-y-4">
+                {solutionPoints.map((point, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm md:text-base">{point}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 p-4 bg-green-100 rounded-lg border border-green-300">
+                <p className="text-green-700 font-semibold text-center">
+                  Result: 30-50% revenue increase within 90 days guaranteed
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Revenue Calculator Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Calculate Your Lost Revenue</h2>
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
+              See exactly how much money you're losing every day from missed calls during breaks, after hours, weekends,
+              and holidays.
+            </p>
+          </div>
+
+          <div className="bg-gray-50 p-6 md:p-8 rounded-2xl border border-gray-200">
+            <RevenueCalculator />
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Cards Section */}
+      <section className="py-16 md:py-24 bg-blue-50">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">How Our AI Receptionist Works</h2>
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Three simple steps to transform your business and never miss another customer again, even during
+              off-hours.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
+            <Card className="bg-white border-gray-200 hover:border-blue-300 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <CardContent className="p-6 md:p-8 text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Phone className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Instant Answer</h3>
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
+                  Every call answered in under 2 seconds, 24/7 including breaks, nights, weekends, and holidays. No more
+                  voicemails, no more lost customers.
+                </p>
+                <div className="text-2xl font-bold text-blue-600">100% Capture Rate</div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-gray-200 hover:border-blue-300 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <CardContent className="p-6 md:p-8 text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Calendar className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Booking</h3>
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
+                  AI qualifies leads, handles objections, and books appointments directly into your calendar
+                  automatically, even when you're sleeping.
+                </p>
+                <div className="text-2xl font-bold text-blue-600">Instant Bookings</div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-gray-200 hover:border-blue-300 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <CardContent className="p-6 md:p-8 text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <TrendingUp className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Revenue Growth</h3>
+                <p className="text-gray-600 mb-4 text-sm md:text-base">
+                  Watch your revenue grow as you capture every lead, including those after-hour emergencies. Clients see
+                  $20K-$50K additional monthly revenue.
+                </p>
+                <div className="text-2xl font-bold text-blue-600">$35K+ Monthly</div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-blue-600">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xl md:text-4xl font-bold text-white mb-3 md:mb-6">
-            Stop Losing Customers to Your Competitors
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 md:mb-6">
+            Stop Losing Customers During Off-Hours
           </h2>
-          <p className="text-sm md:text-xl text-blue-100 mb-4 md:mb-8 max-w-3xl mx-auto">
-            <strong>Every day you wait, you're losing customers.</strong> Apply for a free custom demo and see exactly
-            how our AI receptionist will capture every lead for your specific business. Limited spots available.
+          <p className="text-base md:text-xl text-blue-100 mb-8 md:mb-12 max-w-3xl mx-auto">
+            <strong>
+              Every break, every evening, every weekend you're not answering calls, you're losing customers.
+            </strong>{" "}
+            Apply for a free custom demo and see exactly how our AI receptionist will capture every lead for your
+            specific business. Limited spots available.
           </p>
           <Link href="https://tally.so/r/3y8G66" target="_blank">
             <Button
               size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 md:px-8 md:py-4 text-base md:text-lg font-semibold"
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 md:px-12 md:py-6 text-lg md:text-xl font-semibold transition-all duration-200 hover:scale-105 shadow-lg"
             >
               Apply for Free Custom Demo
-              <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+              <ArrowRight className="ml-3 h-5 w-5 md:h-6 md:w-6" />
             </Button>
           </Link>
-          <p className="text-blue-100 mt-3 md:mt-4 text-xs md:text-base">
+          <p className="text-blue-100 mt-6 text-sm md:text-base">
             ✓ See it work with your actual business data ✓ Custom-built for your industry
           </p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-12 md:py-16">
+      <footer className="bg-gray-900 py-12 md:py-16 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 md:space-x-3 mb-4 md:mb-0">
-              <Image src="/logo.png" alt="Tiham AI Studio" width={24} height={24} className="w-6 h-6 md:w-8 md:h-8" />
-              <span className="text-lg md:text-xl font-bold text-white">Tiham AI Studio</span>
+            <div className="flex items-center space-x-3 mb-4 md:mb-0">
+              <Image src="/logo.png" alt="Tiham AI Studio" width={32} height={32} className="w-8 h-8" />
+              <span className="text-xl font-bold text-white">Tiham AI Studio</span>
             </div>
             <p className="text-gray-400 text-sm md:text-base">© 2024 Tiham AI Studio. All rights reserved.</p>
           </div>
