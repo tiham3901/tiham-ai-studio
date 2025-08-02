@@ -54,7 +54,7 @@ export default function LandingPage() {
       {/* Header */}
       <header className="border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4 md:py-6">
+          <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-2 md:space-x-3">
               <Image src="/logo.png" alt="Tiham AI Studio" width={32} height={32} className="w-8 h-8 md:w-10 md:h-10" />
               <span className="text-lg md:text-2xl font-bold text-gray-900">Tiham AI Studio</span>
@@ -69,7 +69,7 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-8 md:py-32 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
           <h1 className="text-2xl md:text-6xl font-bold text-gray-900 mb-4 md:mb-10 leading-tight">
             Turn Missed Calls Into
@@ -96,7 +96,7 @@ export default function LandingPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-6 md:py-28 bg-white border-t border-b border-gray-100">
+      <section className="py-12 md:py-20 bg-white border-t border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
             {stats.map((stat, index) => (
@@ -110,7 +110,7 @@ export default function LandingPage() {
       </section>
 
       {/* Problem Section */}
-      <section className="py-8 md:py-32 bg-red-50">
+      <section className="py-16 md:py-24 bg-red-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-24">
             <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-8">
@@ -179,7 +179,7 @@ export default function LandingPage() {
       </section>
 
       {/* Solution Section */}
-      <section className="py-8 md:py-32 bg-blue-50">
+      <section className="py-16 md:py-24 bg-blue-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-24">
             <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-8">
@@ -241,7 +241,7 @@ export default function LandingPage() {
       </section>
 
       {/* Industries Section */}
-      <section className="py-8 md:py-32 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-24">
             <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-8">
@@ -274,7 +274,7 @@ export default function LandingPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-8 md:py-32 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-24">
             <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-8">
@@ -298,7 +298,7 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-8 md:py-32 bg-blue-600">
+      <section className="py-16 md:py-24 bg-blue-600">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
           <h2 className="text-xl md:text-4xl font-bold text-white mb-3 md:mb-6">
             Stop Losing Customers to Your Competitors
@@ -323,7 +323,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-8 md:py-16">
+      <footer className="bg-gray-900 py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 md:space-x-3 mb-4 md:mb-0">
