@@ -69,7 +69,7 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-white">
+      <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
           <h1 className="text-2xl md:text-6xl font-bold text-gray-900 mb-4 md:mb-10 leading-tight">
             Turn Missed Calls Into
@@ -95,8 +95,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 md:py-20 bg-white border-t border-b border-gray-100">
+      {/* Stats Section - moved right after hero */}
+      <section className="py-8 md:py-16 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
             {stats.map((stat, index) => (
@@ -109,7 +109,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Problem Section */}
+      {/* Problem Section - now comes after stats */}
       <section className="py-16 md:py-24 bg-red-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-24">
