@@ -18,13 +18,13 @@ export function RevenueCalculator() {
   const annualLoss = monthlyLoss * 12
 
   return (
-    <div className="space-y-4">
-      <h3 className="text-xl font-bold text-red-600 mb-4 text-center">Interactive Revenue Loss Calculator</h3>
+    <div className="space-y-5">
+      <h3 className="text-2xl font-bold text-red-600 mb-5 text-center">Interactive Revenue Loss Calculator</h3>
 
-      <div className="grid md:grid-cols-2 gap-4">
-        <div className="space-y-4">
+      <div className="grid md:grid-cols-2 gap-5">
+        <div className="space-y-5">
           <div>
-            <Label htmlFor="call-value" className="text-xs font-medium text-gray-700 mb-1 block">
+            <Label htmlFor="call-value" className="text-sm font-medium text-gray-700 mb-2 block">
               Average Service/Job Value ($)
             </Label>
             <Input
@@ -32,12 +32,12 @@ export function RevenueCalculator() {
               type="number"
               value={avgCallValue}
               onChange={(e) => setAvgCallValue(Number(e.target.value))}
-              className="w-full text-sm"
+              className="w-full"
             />
           </div>
 
           <div>
-            <Label htmlFor="calls-per-week" className="text-xs font-medium text-gray-700 mb-1 block">
+            <Label htmlFor="calls-per-week" className="text-sm font-medium text-gray-700 mb-2 block">
               Total Calls Per Week
             </Label>
             <Input
@@ -45,12 +45,12 @@ export function RevenueCalculator() {
               type="number"
               value={callsPerWeek}
               onChange={(e) => setCallsPerWeek(Number(e.target.value))}
-              className="w-full text-sm"
+              className="w-full"
             />
           </div>
 
           <div>
-            <Label className="text-xs font-medium text-gray-700 mb-2 block">Missed Call Rate: {missedCallRate}%</Label>
+            <Label className="text-sm font-medium text-gray-700 mb-3 block">Missed Call Rate: {missedCallRate}%</Label>
             <Slider
               value={[missedCallRate]}
               onValueChange={(value) => setMissedCallRate(value[0])}
@@ -66,7 +66,7 @@ export function RevenueCalculator() {
           </div>
 
           <div>
-            <Label className="text-xs font-medium text-gray-700 mb-2 block">Lead Conversion Rate: {closingRate}%</Label>
+            <Label className="text-sm font-medium text-gray-700 mb-3 block">Lead Conversion Rate: {closingRate}%</Label>
             <Slider
               value={[closingRate]}
               onValueChange={(value) => setClosingRate(value[0])}
@@ -82,27 +82,27 @@ export function RevenueCalculator() {
           </div>
         </div>
 
-        <div className="bg-red-50 p-4 rounded-lg border-2 border-red-200">
-          <h4 className="font-bold text-gray-900 mb-3 text-sm">Your Revenue Loss Breakdown</h4>
-          <div className="space-y-2">
-            <div className="flex justify-between items-center py-1 border-b border-red-200">
-              <span className="text-gray-600 text-xs">Calls missed per week:</span>
-              <span className="font-semibold text-red-600 text-xs">{missedCallsPerWeek}</span>
+        <div className="bg-red-50 p-5 rounded-lg border-2 border-red-200">
+          <h4 className="font-bold text-gray-900 mb-4">Your Revenue Loss Breakdown</h4>
+          <div className="space-y-3">
+            <div className="flex justify-between items-center py-2 border-b border-red-200">
+              <span className="text-gray-600 text-sm">Calls missed per week:</span>
+              <span className="font-semibold text-red-600">{missedCallsPerWeek}</span>
             </div>
-            <div className="flex justify-between items-center py-1 border-b border-red-200">
-              <span className="text-gray-600 text-xs">Potential leads lost per week:</span>
-              <span className="font-semibold text-red-600 text-xs">{potentialLeadsLost}</span>
+            <div className="flex justify-between items-center py-2 border-b border-red-200">
+              <span className="text-gray-600 text-sm">Potential leads lost per week:</span>
+              <span className="font-semibold text-red-600">{potentialLeadsLost}</span>
             </div>
-            <div className="flex justify-between items-center py-1 border-b border-red-200">
-              <span className="text-gray-600 text-xs">Weekly revenue lost:</span>
-              <span className="font-semibold text-red-600 text-xs">${weeklyLoss.toLocaleString()}</span>
+            <div className="flex justify-between items-center py-2 border-b border-red-200">
+              <span className="text-gray-600 text-sm">Weekly revenue lost:</span>
+              <span className="font-semibold text-red-600">${weeklyLoss.toLocaleString()}</span>
             </div>
-            <div className="bg-white p-3 rounded-lg mt-3 border-2 border-red-300">
-              <div className="flex justify-between text-sm mb-1">
+            <div className="bg-white p-4 rounded-lg mt-4 border-2 border-red-300">
+              <div className="flex justify-between text-lg mb-2">
                 <span className="text-gray-900 font-bold">Monthly loss:</span>
                 <span className="font-bold text-red-600">${monthlyLoss.toLocaleString()}</span>
               </div>
-              <div className="flex justify-between text-base">
+              <div className="flex justify-between text-xl">
                 <span className="text-gray-900 font-bold">Annual loss:</span>
                 <span className="font-bold text-red-600">${annualLoss.toLocaleString()}</span>
               </div>
@@ -111,7 +111,7 @@ export function RevenueCalculator() {
         </div>
       </div>
 
-      <div className="text-center text-xs text-gray-600 mt-3">
+      <div className="text-center text-sm text-gray-600 mt-4">
         <p>
           💡 <strong>Tip:</strong> Adjust the sliders based on your industry. HVAC/Roofing typically have higher missed
           call rates and job values.
