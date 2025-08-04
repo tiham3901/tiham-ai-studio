@@ -18,11 +18,11 @@ export function RevenueCalculator() {
   const annualLoss = monthlyLoss * 12
 
   return (
-    <div className="space-y-5">
-      <h3 className="text-2xl font-bold text-red-600 mb-5 text-center">Interactive Revenue Loss Calculator</h3>
+    <div className="space-y-6">
+      <h3 className="text-2xl font-bold text-red-600 mb-6 text-center">Interactive Revenue Loss Calculator</h3>
 
-      <div className="grid md:grid-cols-2 gap-5">
-        <div className="space-y-5">
+      <div className="grid md:grid-cols-2 gap-6">
+        <div className="space-y-6">
           <div>
             <Label htmlFor="call-value" className="text-sm font-medium text-gray-700 mb-2 block">
               Average Service/Job Value ($)
@@ -82,19 +82,19 @@ export function RevenueCalculator() {
           </div>
         </div>
 
-        <div className="bg-red-50 p-5 rounded-lg border-2 border-red-200">
+        <div className="bg-red-50 p-6 rounded-lg border-2 border-red-200">
           <h4 className="font-bold text-gray-900 mb-4">Your Revenue Loss Breakdown</h4>
           <div className="space-y-3">
             <div className="flex justify-between items-center py-2 border-b border-red-200">
-              <span className="text-gray-600 text-sm">Calls missed per week:</span>
+              <span className="text-gray-600">Calls missed per week:</span>
               <span className="font-semibold text-red-600">{missedCallsPerWeek}</span>
             </div>
             <div className="flex justify-between items-center py-2 border-b border-red-200">
-              <span className="text-gray-600 text-sm">Potential leads lost per week:</span>
+              <span className="text-gray-600">Potential leads lost per week:</span>
               <span className="font-semibold text-red-600">{potentialLeadsLost}</span>
             </div>
             <div className="flex justify-between items-center py-2 border-b border-red-200">
-              <span className="text-gray-600 text-sm">Weekly revenue lost:</span>
+              <span className="text-gray-600">Weekly revenue lost:</span>
               <span className="font-semibold text-red-600">${weeklyLoss.toLocaleString()}</span>
             </div>
             <div className="bg-white p-4 rounded-lg mt-4 border-2 border-red-300">
